@@ -1,0 +1,29 @@
+# secrets
+*.key
+privatekey
+publickey
+*.pem
+.aws/
+credentials
+.env
+
+# configs that may contain keys (sanitized examples use the .example suffix)
+*.conf
+!*.conf.example
+
+# VM images and disks
+*.ova
+*.vdi
+*.vbox
+*.vmdk
+*.7z
+
+# tool output
+output/
+prowler-output/
+*.asff.json
+*.ocsf.json
+
+# OS junk
+Thumbs.db
+.DS_Store
