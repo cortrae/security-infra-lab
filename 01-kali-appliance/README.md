@@ -196,6 +196,30 @@ Shell scripts are pinned to LF line endings in `.gitattributes` (`\*.sh text eol
 
 
 
+\## Export
+
+
+
+Exported the finished VM as an OVA for portability. The file is not committed (`\*.ova` is in `.gitignore`) and is written outside the repo.
+
+
+
+```
+
+VBoxManage export "<vm-name>" --output "<path>\\kali-lab-appliance.ova" --ovf20
+
+```
+
+
+
+Resulting file size: 10.39 GB. A final snapshot (`project1-complete`) was taken first as a restore point.
+
+
+
+Before sharing an exported appliance with anyone, treat it as containing secrets: it carries the account password, the authorized SSH key, and the SSH host keys. Change or remove those, and regenerate host keys, before handing it off.
+
+
+
 \## Troubleshooting
 
 
